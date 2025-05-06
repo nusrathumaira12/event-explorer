@@ -1,0 +1,63 @@
+[
+    {
+      "id": "event_001",
+      "name": "Tech Innovators Conference 2025",
+      "thumbnail": "https://i.ibb.co.com/WNNjcvPy/dan-taylor-ck-B5d-Hb-Cs-CM-unsplash.jpg",
+      "category": "Technology",
+      "date": "2025-05-15",
+      "location": "Dhaka Convention Center, Dhaka",
+      "entry_fee": 1250,
+      "description": "An exclusive gathering of tech leaders and innovators from around the world."
+    },
+    {
+      "id": "event_002",
+      "name": "Art Fusion Festival",
+      "thumbnail": "https://i.ibb.co.com/N2Gh2RMS/spencer-chow-DDqoc-LNZ8-J8-unsplash.jpg",
+      "category": "Art",
+      "date": "2025-06-10",
+      "location": "National Art Gallery, Dhaka",
+      "entry_fee": 650,
+      "description": "A vibrant celebration of contemporary and traditional art forms."
+    },
+    {
+      "id": "event_003",
+      "name": "Startup Pitch Night",
+      "thumbnail": "https://i.ibb.co.com/hqy1M8r/videoters-y-Ql-Mu-Cgckl-M-unsplash.jpg",
+      "category": "Business",
+      "date": "2025-06-22",
+      "location": "Dhaka Business Hub, Dhaka",
+      "entry_fee": 300,
+      "description": "Watch the top 10 startups pitch their ideas to investors live."
+    },
+    {
+      "id": "event_004",
+      "name": "Digital Marketing Summit",
+      "thumbnail": "https://i.ibb.co.com/s9LtvfKx/evangeline-shaw-F3-RCd-DZq-AZU-unsplash.jpg",
+      "category": "Marketing",
+      "date": "2025-07-05",
+      "location": "Online Event",
+      "entry_fee": 1500,
+      "description": "Learn the latest trends in digital marketing from industry leaders."
+    },
+    {
+      "id": "event_005",
+      "name": "AI & Robotics Expo",
+      "thumbnail": "https://i.ibb.co.com/d4cxVgG2/ticka-kao-NGq-Wb-Kcjg-J4-unsplash.jpg",
+      "category": "Technology",
+      "date": "2025-07-20",
+      "location": "Tech City Hall, Dhaka",
+      "entry_fee": 2100,
+      "description": "Explore cutting-edge AI and robotics innovations and live demos."
+    },
+    {
+      "id": "event_006",
+      "name": "Cultural Heritage Night",
+      "thumbnail": "https://i.ibb.co.com/5xRrhCXw/frederic-barriol-e8j0-P8-V5k-NM-unsplash.jpg",
+      "category": "Culture",
+      "date": "2025-08-01",
+      "location": "Open Air Theatre, Dhaka",
+      "entry_fee": 799,
+      "description": "An evening of music, dance, and traditions from Bangladesh and beyond."
+    }
+  ]
+  
