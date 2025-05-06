@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
-import { valueContext } from '../../RootLayout/RootLayout';
-import { Navigate } from 'react-router';
+import React from 'react';
+
+
 
 const About = () => {
-    const {user}  = useContext(valueContext)
-    if(!user || !user?.email){
-        return <Navigate to="/login"></Navigate>
-    }
+    // const {user}  = useContext(valueContext)
+    // if(!user || !user?.email){
+    //     return <Navigate to="/login"></Navigate>
+    // }
     return (
         <div>
             I am about

@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Navigate, useLoaderData,  useParams } from 'react-router';
-import { valueContext } from '../../RootLayout/RootLayout';
+
 
 const EventDetails = () => {
     const {id}  = useParams()
@@ -8,13 +8,10 @@ const EventDetails = () => {
  const singleData = data.find(event => event.id == id)
  console.log(singleData)
  const {date,location,name,entry_fee,thumbnail,description } = singleData;
- const {user} = useContext(valueContext)
- 
-
-
- if(!user || !user?.email){
-   return <Navigate to="/login"></Navigate>
- }
+//  const {user} = useContext(valueContext)
+//  if(!user || !user?.email){
+//    return <Navigate to="/login"></Navigate>
+//  }
     return (
         <div className="py-6">
 <div className='md:flex mx-auto w-[90%]  justify-center gap-2'>

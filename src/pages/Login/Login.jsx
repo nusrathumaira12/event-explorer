@@ -1,12 +1,15 @@
 
 import React, { useContext, useState } from 'react';
-import { NavLink } from 'react-router';
+import { NavLink, useLocation, useNavigate } from 'react-router';
 
 import { valueContext } from '../../RootLayout/RootLayout';
 
 const Login = () => {
-    const {handleLogin} = useContext(valueContext)
-   
+    const {handleLogin,handleForgetPassword } = useContext(valueContext)
+    const [userEmail, setUserEmail] = useState("")
+    const location = useLocation()
+   const from = location?.state?.from
+   const navigate= useNavigate()
 
   
     const handleSubmit = e => {
@@ -18,7 +21,7 @@ handleLogin(email,password)
 .then((result) => {
     
     const currentUser = result.user;
-   
+   navigate(from?from:"/")
   
   })
   .catch((error) => {
@@ -61,18 +64,22 @@ handleLogin(email,password)
             <div className="space-y-4">
                 <div className="space-y-2">
                     <label htmlFor="email" className="block text-sm">Email address</label>
-                    <input type="email" name="email" id="email" placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                    <input type="email" name="email" id="email" 
+                    onChange={(e)=>setUserEmail(e.target.value)}
+                    placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                 </div>
                 <div className="space-y-2">
                     <div className="flex justify-between">
                         <label htmlFor="password" className="text-sm">Password</label>
-                        <a rel="noopener noreferrer" href="#" className="text-xs hover:underline dark:text-gray-600">Forgot password?</a>
+                        <button onClick={()=>handleForgetPassword(userEmail)} className="text-xs hover:underline dark:text-gray-600">Forgot password?</button>
                     </div>
                     <input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                 </div>
             </div>
             <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">Sign in</button>
+           
         </form>
+        {/* <button onClick={()=>handleForgetPassword(userEmail)}>Forget Password</button> */}
     </div>
     );
 };

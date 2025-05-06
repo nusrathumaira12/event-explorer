@@ -10,8 +10,10 @@ import Register from "../pages/Register/Register";
 import MyProfile from "../pages/MyProfile/MyProfile";
 import EventDetails from "../pages/EventDetails/EventDetails";
 import ReservedSeats from "../pages/ReservedSeats/ReservedSeats";
-
+import PrivateRoute from "../component/PrivateRoute/PrivateRoute";
 import Reviews from "../pages/Reviews/Reviews";
+
+
 
 
 
@@ -33,10 +35,14 @@ export const router = createBrowserRouter([
                 path: "/myProfile",
                 Component: MyProfile
             },
+           
             {
                 path: "/reviews",
-                Component: Reviews
+                element: <PrivateRoute>
+                    <Reviews></Reviews>
+                </PrivateRoute>
             },
+           
            
             {
                 path: "/login",
@@ -48,7 +54,9 @@ export const router = createBrowserRouter([
             },
             {
                 path:  "/eventdetails/:id",
-                Component: EventDetails,
+               element: <PrivateRoute>
+                <EventDetails></EventDetails>
+               </PrivateRoute>,
                 loader: ()=>fetch("/data.json"),
 
             },
