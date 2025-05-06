@@ -1,7 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 
 const SingleCard = ({event}) => {
-  
+  const navigate = useNavigate()
     return (
             <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden h-[500px] rounded-2xl shadow-2xl bg-violet-800 text-white ">
         
@@ -18,7 +19,7 @@ const SingleCard = ({event}) => {
         </div>
         <div className="flex flex-wrap justify-between">
             <div className="space-x-1">
-               <button type="button" className="px-8 py-2 font-semibold rounded-full bg-white text-violet-900">View More</button>
+               <button type="button" onClick={()=>navigate(`/eventdetails/${event.id}`)} className="px-8 py-2 font-semibold rounded-full bg-white text-violet-900">View More</button>
             </div>
             <div className="flex  text-sm dark:text-gray-600">
               

@@ -2,16 +2,16 @@ import React, { useContext } from 'react';
 import { valueContext } from '../../RootLayout/RootLayout';
 import { Navigate } from 'react-router';
 
-const About = () => {
-    const {user}  = useContext(valueContext)
+const ReservedSeats = () => {
+    const {user} = useContext(valueContext)
     if(!user || !user?.email){
         return <Navigate to="/login"></Navigate>
     }
     return (
         <div>
-            I am about
+          i ma booked
         </div>
     );
 };
 
-export default About;
+export default ReservedSeats;

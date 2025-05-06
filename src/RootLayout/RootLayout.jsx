@@ -3,6 +3,7 @@ import { Outlet } from 'react-router';
 import Navbar from '../component/Navbar/Navbar';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from '../firebase/firebase.config';
+import Footer from '../component/Footer/Footer';
 export  const  valueContext =createContext()
 
 
@@ -21,7 +22,7 @@ const RootLayout = () => {
     signOut(auth).then(() => {
        
       }).catch((error) => {
-       
+       console.log(error)
       });
 
 
@@ -59,6 +60,7 @@ const RootLayout = () => {
             <valueContext.Provider value={contextValues}>
             <Navbar></Navbar>
             <Outlet></Outlet>
+            <Footer></Footer>
             </valueContext.Provider>
         </div>
     );

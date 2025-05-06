@@ -7,10 +7,10 @@ const Banner = () => {
             <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                 <h1 className="text-5xl font-bold leading-none sm:text-6xl">International
                    <br />
-                    <span className="text-violet-600">Business</span>conference 2025
+                    <span className="text-violet-600">Business</span><span className='text-amber-500  text-6xl'>C</span>onference 2025
                 </h1>
-                <p className="mt-6 mb-8 text-lg sm:mb-12">Dictum aliquam porta in condimentum ac integer
-                    <br  className="hidden md:inline lg:hidden" />turpis pulvinar, est scelerisque ligula sem
+                <p className="mt-6 mb-8 text-lg sm:mb-12"> FusionSphere connects you to a world of inspiration and innovation.
+                    <br  className="hidden md:inline lg:hidden" />Explore, connect, and create—FusionSphere is where the future of creative events begins.
                 </p>
                 <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
                     <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Suspendisse</a>
