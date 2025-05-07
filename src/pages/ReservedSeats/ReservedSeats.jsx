@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { valueContext } from '../../RootLayout/RootLayout';
+import { ValueContext } from '../../RootLayout/RootLayout';
 import { Navigate } from 'react-router';
 
 const ReservedSeats = () => {
-    const {user} = useContext(valueContext)
+    const {user} = useContext(ValueContext)
     if(!user || !user?.email){
         return <Navigate to="/login"></Navigate>
     }

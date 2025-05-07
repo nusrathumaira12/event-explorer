@@ -4,7 +4,6 @@ import {
 import RootLayout from "../RootLayout/RootLayout";
 import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
-
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import MyProfile from "../pages/MyProfile/MyProfile";
@@ -12,6 +11,7 @@ import EventDetails from "../pages/EventDetails/EventDetails";
 import ReservedSeats from "../pages/ReservedSeats/ReservedSeats";
 import PrivateRoute from "../component/PrivateRoute/PrivateRoute";
 import Reviews from "../pages/Reviews/Reviews";
+import TechEvents from "../pages/TechEvents/TechEvents";
 
 
 
@@ -33,7 +33,9 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/myProfile",
-                Component: MyProfile
+                element: <PrivateRoute>
+                    <MyProfile></MyProfile>
+                </PrivateRoute>
             },
            
             {
@@ -63,6 +65,10 @@ export const router = createBrowserRouter([
             {
                 path:"/reservedSeats",
                Component: ReservedSeats
+            },
+            {
+                path: "/techEvents",
+                Component: TechEvents
             }
 
         ]

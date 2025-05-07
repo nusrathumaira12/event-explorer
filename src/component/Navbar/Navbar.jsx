@@ -1,21 +1,24 @@
 import React, { useContext } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router';
-import { valueContext } from '../../RootLayout/RootLayout';
+import { ValueContext } from '../../RootLayout/RootLayout';
 import { SiEventstore } from 'react-icons/si';
+import userIcon from "../../assets/user.png"
 
 const Navbar = () => {
-     const {user} =useContext(valueContext)
-        console.log(user)
-    const navigate = useNavigate()
+     const {user} =useContext(ValueContext)
+        const navigate = useNavigate()
     const {pathname}= useLocation()
-    console.log(pathname)
-    const { handleLogOut} = useContext(valueContext)
+    const { handleLogOut} = useContext(ValueContext)
+  
+    const userName = user?.displayName || 'User';
     return (
         <header className="p-4 bg-gray-200">
             <div className="container flex justify-between h-16 mx-auto">
         
 
-                <div className="flex text-3xl font-bold items-center pt-4 text-violet-700"> <span className='text-amber-500  text-4xl'> <SiEventstore /> </span>  Fusion<span className='text-amber-600'>S</span>phere</div>
+                <div className="flex text-3xl font-bold items-center pt-4 text-violet-700"> 
+               
+                    <span className='text-amber-500  text-4xl'> <SiEventstore /> </span>  Fusion<span className='text-amber-600'>S</span>phere</div>
                 <ul className="items-stretch hidden space-x-3 lg:flex">
                     <li className="flex">
                         <NavLink className="flex items-center px-4 -mb-1 "
@@ -40,9 +43,24 @@ const Navbar = () => {
                    
                     
                 </ul>
+               
                 <div className="items-center flex-shrink-0 hidden lg:flex">
-                    <button onClick={()=>navigate("/login")} className={`self-center px-8 py-3 rounded ${pathname== "/login" ? "text-blue-900" : ""}`}>Log in</button>
-                    <button onClick={()=>navigate("/register")}  className={`self-center px-8 py-3 rounded ${pathname== "/register" ? "text-blue-900" : ""}`}>Register</button>
+                <div className=''>{user && user.email}</div>
+                <div className="relative">
+                    <img className='w-14 h-14 rounded-full cursor-pointer' src={`${user ? user.photoURL : userIcon}`} alt="" />
+                    <div className="absolute top-11 left-1/2 transform -translate-x-1/2 bg-purple-700 text-black px-4 py-2 rounded-md text-sm opacity-0 transition-opacity duration-300 hover:opacity-100">
+                {userName}
+              </div>
+            </div>
+          
+
+                {!user?.email &&  <button onClick={()=>navigate("/login")} 
+                    className={`self-center px-8 py-3 rounded font-bold
+                    ${pathname== "/login" ? "text-blue-900" : ""}`}
+                    >
+                        Log in</button>}
+                     
+                    <button onClick={()=>navigate("/register")}  className={`self-center px-8 py-3 rounded font-bold ${pathname== "/register" ? "text-blue-900" : ""}`}>Register</button>
                     {
                         user?.email && 
                         <button onClick={handleLogOut} className={`self-center px-8 py-3 rounded`}>

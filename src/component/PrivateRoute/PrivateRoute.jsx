@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { valueContext } from '../../RootLayout/RootLayout';
+import { ValueContext} from '../../RootLayout/RootLayout';
 import { Navigate, useLocation } from 'react-router';
 
 const PrivateRoute = ({ children }) => {
   
-    const {user,loading} = useContext(valueContext)
+    const {user,loading} = useContext(ValueContext)
     const location = useLocation()
    
     if(loading){
@@ -14,10 +14,10 @@ const PrivateRoute = ({ children }) => {
         return <Navigate state={{from:location.pathname}} to="/login"></Navigate>
     }
     return (
-        <div>
+        <>
            
             {children}
-        </div>
+        </>
     );
 };
 
