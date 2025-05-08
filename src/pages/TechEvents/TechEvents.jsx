@@ -4,7 +4,7 @@ const TechEvents = () => {
     return (
         <div className='w-11/12  mx-auto my-30 justify-center '>
             
-            <h2 className='text-4xl text-gray-800 font-bold mb-8 justify-center w-2/6 mx-auto items-center '>Tech Events In Dhaka</h2>
+            <h2 className='text-4xl text-gray-800 font-bold mb-10 pl-10 justify-center w-2/6 mx-auto items-center '>Tech Events In Dhaka</h2>
             
                     <div className='flex flex-cols-2 md:flex-cols-3   gap-6 justify-center  mx-10 '>
 
@@ -39,7 +39,8 @@ const TechEvents = () => {
 
 </div>
 <div className=' justify-center mx-auto w-[300px]'>
-<button type="button" className="px-8 py-3   font-semibold border mt-5 mb-5  mx-auto rounded border-gray-300 text-gray-800">View all Tech Events</button>
+<button type="button" className="px-8 py-3   font-semibold border mt-5 mb-5  mx-auto rounded border-gray-300 text-gray-800">View all 
+	Category Events</button>
 </div>
 
         </div>

@@ -1,19 +1,40 @@
-import React from 'react';
-import { Navigate, useLoaderData,  useParams } from 'react-router';
+import React, { useState } from 'react';
+import {  useLoaderData,  useParams } from 'react-router';
+import { toast } from 'react-toastify';
 
 
 const EventDetails = () => {
     const {id}  = useParams()
   const data = useLoaderData()
  const singleData = data.find(event => event.id == id)
- console.log(singleData)
+ 
  const {date,location,name,entry_fee,thumbnail,description } = singleData;
 //  const {user} = useContext(valueContext)
 //  if(!user || !user?.email){
 //    return <Navigate to="/login"></Navigate>
 //  }
+
+const [formData, setFormData] = useState({ name: '', email: '' })
+const [submitted, setSubmitted]= useState(false)
+
+const handleChange = (e) => {
+  setFormData(prev =>  ({
+    ...prev,
+    [e.target.name] : e.target.value
+  }))
+}
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  setSubmitted(true);
+  toast.success('Seat reserved successfully!');
+  setFormData({ name: '', email: '' });
+}
+
     return (
-        <div className="py-6">
+        <div className="py-6 bg-white">
+         <h2 class="text-5xl font-semibold text-violet-600 my-20  mx-auto text-center">Event Spotlight</h2>
 <div className='md:flex mx-auto w-[90%]  justify-center gap-2'>
 <div className='w-[60%] h-[600x] '>
     <img src={thumbnail} alt="" />
@@ -43,39 +64,47 @@ const EventDetails = () => {
       <p className="text-lg font-medium">{location}</p>
     </div>
     <div>
-    <p className="text-sm text-gray-500">Entry Fee</p>
+    <p className="text-sm text-gray-500">💰 Entry Fee</p>
     <p className="text-lg font-medium text-green-600">{entry_fee} BDT/-</p>
     </div>
   </div>
   </div>
 </div>
-<div className='bg-violet-300 text-white'>
-    <h2>About {name}</h2>
+<div className='relative flex  mx-auto px-10 justify-center my-20 gap-6  w-10/12'>
+<div className=' bg-violet-300 text-white w-6/10 py-6 m-6 px-20 ml-10  rounded-2xl'>
+    <h2 className='font-bold text-2xl mb-3'>About {name}</h2>
    <p> {description}</p>
     </div>
 
-        {/* <h2 className="text-2xl font-bold mb-4">Event Details</h2>
-        {/* Replace below with actual fetched data based on `id` */}
-        {/* <p>Date: 26 March 2023</p>
-        <p>Title: Children education</p>
-        <p>Duration: 2 days</p>
-        <p>Time: 10:00 am to 6:00 pm</p>
-        <p>Location: New York, USA</p>
-        <p>Website: www.chamberoil.com</p> */} 
-  
-        {/* <form onSubmit={handleSubmit} className="mt-6 space-y-4 max-w-md">
-          <input type="text" name="name" placeholder="Your Name" required
-                 onChange={handleChange} className="w-full p-2 border rounded" />
-          <input type="email" name="email" placeholder="Your Email" required
-                 onChange={handleChange} className="w-full p-2 border rounded" />
-          <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
+        <form onSubmit={handleSubmit} className=" m-6 ml-3  flex-1 w-5/10 
+        
+        space-y-4 max-w-md mr-10 px-10 py-6 bg-gray-100  rounded-2xl">
+        <h3 className="text-xl font-bold text-gray-800 mb-2">Reserve a Seat</h3>
+          <input type="text" name="name"
+          value={formData.name}
+          placeholder="Your Name" required
+                 onChange={handleChange} className="w-full p-2 bg-white border border-gray-200 rounded" />
+          <input type="email" name="email"
+          value={formData.email}
+          placeholder="Your Email" required
+                 onChange={handleChange} className="w-full p-2 bg-white  border border-gray-200 rounded" />
+          <button type="submit" className="bg-violet-600 text-white px-4 py-2 rounded-2xl font-semibold">
             Reserve Seat
           </button>
-          {submitted && <p className="text-green-600 mt-2">Seat reserved successfully!</p>}
-        </form> */}
+          {submitted && 
+          
+         
+          <p className=" mt-2 absolute text-2xl fon-bold -top-10 right-25 bg-green-500 text-white">
+         Seat reserved successfully!
+            </p>
+          
+          }
+        </form>
 
+      </div>
       </div>
     );
   };
+
 
 export default EventDetails;

@@ -7,7 +7,10 @@
       "date": "2025-05-15",
       "location": "Dhaka Convention Center, Dhaka",
       "entry_fee": 1250,
-      "description": "An exclusive gathering of tech leaders and innovators from around the world."
+      "description": "The Tech Innovators Conference 2025 is set to be one of the most transformative technology events of the year, bringing together a dynamic mix of visionaries, entrepreneurs, engineers, and thought leaders from around the globe. Scheduled for August 18–20, 2025, in San Francisco, the conference will explore the latest breakthroughs in artificial intelligence, quantum computing, Web3, robotics, and sustainable tech. Attendees can expect three days of high-impact keynote speeches, interactive panel discussions, product demonstrations, and immersive workshops designed to spark innovation and foster collaboration. This year’s theme, “Shaping the Future Together”, underscores the importance of cross-disciplinary partnerships in solving complex global challenges through technology. Startups will have the opportunity to showcase their solutions in the Startup Arena, while investors and corporate leaders scout for the next big ideas. Notable speakers include CEOs of leading tech firms, AI ethicists, and renowned scientists who are pioneering next-generation technologies. In addition to the conference sessions, networking lounges and tech hubs will allow professionals to connect in real time, exchange ideas, and form lasting partnerships. A highlight of the event is the Tech Impact Awards, which celebrate groundbreaking projects that demonstrate both technological excellence and social impact. The conference will also host exclusive sessions for students and early-career professionals, offering mentorship and insight into the fast-evolving tech industry. With a blend of inspiration, education, and actionable insights, the Tech Innovators Conference 2025 promises to be a landmark event for anyone passionate about the future of technology. Whether you're a developer seeking to stay ahead of the curve, an investor looking for disruptive innovations, or a leader driving digital transformation, this conference offers the tools, connections, and vision to help shape tomorrow’s world. Early registration is now open, and spaces are limited due to high demand."
+
+
+
     },
     {
       "id": "event_002",
@@ -17,7 +20,8 @@
       "date": "2025-06-10",
       "location": "National Art Gallery, Dhaka",
       "entry_fee": 650,
-      "description": "A vibrant celebration of contemporary and traditional art forms."
+   "description": "The Art Fusion Festival 2025 is a vibrant celebration of creativity, culture, and collaboration, set to take place from July 12–14 in the heart of downtown Chicago. This dynamic three-day event brings together artists, performers, and art lovers from across the world to explore the rich intersections of visual art, music, dance, digital media, and performance. With its theme 'United by Expression', the festival aims to break down barriers between art forms and foster a sense of community through shared artistic experiences.\n\nVisitors can expect a colorful blend of live painting sessions, interactive installations, street performances, and curated exhibitions featuring emerging and established artists. Music stages will showcase a diverse lineup of genres—from jazz and indie to electronic and world music—while dance troupes and theater groups perform in open-air settings throughout the city. A highlight of the festival is the Art Fusion Parade, where artists take to the streets in a dazzling display of costumes, puppetry, and kinetic sculptures."
+
     },
     {
       "id": "event_003",
@@ -37,8 +41,9 @@
       "date": "2025-07-05",
       "location": "Online Event",
       "entry_fee": 1500,
-      "description": "Learn the latest trends in digital marketing from industry leaders."
-    },
+     "description": "The Digital Marketing Summit 2025 is a premier event for marketers, entrepreneurs, and business leaders looking to stay ahead in the ever-evolving digital landscape. Held on September 20 at the Los Angeles Convention Center, this one-day summit will cover the latest trends in SEO, social media strategy, influencer marketing, content creation, and AI-powered analytics. Attendees will gain valuable insights from top industry experts, participate in interactive workshops, and explore real-world case studies that drive growth and engagement. The event will also feature networking sessions, product showcases, and panel discussions that focus on practical tools and strategies for success in the digital age. Whether you're a seasoned marketer or just starting out, the summit offers actionable knowledge and fresh perspectives to elevate your marketing game. Don’t miss this opportunity to connect, learn, and lead in a digital-first world."
+},
+   
     {
       "id": "event_005",
       "name": "AI & Robotics Expo",
@@ -47,7 +52,8 @@
       "date": "2025-07-20",
       "location": "Tech City Hall, Dhaka",
       "entry_fee": 2100,
-      "description": "Explore cutting-edge AI and robotics innovations and live demos."
+    "description": "The AI & Robotics Expo 2025 is a groundbreaking event set to take place on December 10 at the Bangabandhu International Conference Center in Dhaka. This one-day expo will showcase the latest advancements in artificial intelligence, robotics, and automation, bringing together innovators, tech companies, researchers, and enthusiasts from around the world. The event aims to highlight how intelligent systems are transforming industries such as healthcare, manufacturing, education, agriculture, and urban mobility.\n\nAttendees can explore cutting-edge exhibits, watch live demonstrations of humanoid robots and autonomous machines, and engage in hands-on workshops. Expert-led panels and keynote sessions will dive into topics like ethical AI, smart robotics in daily life, and the future of human-machine collaboration. Startups and university teams will also have the opportunity to present their projects in the Innovation Zone.\n\nThe AI & Robotics Expo is an unmissable platform for networking, collaboration, and learning about the next wave of technological disruption. Whether you're a professional, student, or curious visitor, the expo offers an inspiring glimpse into the intelligent future that's just around the corner."
+
     },
     {
       "id": "event_006",
@@ -57,7 +63,7 @@
       "date": "2025-08-01",
       "location": "Open Air Theatre, Dhaka",
       "entry_fee": 799,
-      "description": "An evening of music, dance, and traditions from Bangladesh and beyond."
+      "description": "Cultural Heritage Night is a captivating celebration of Bangladesh’s rich traditions, history, and diverse cultural expressions. Set to take place on August 25, 2025, at the National Museum Courtyard in Dhaka, this evening event invites audiences to experience the beauty of folk music, classical dance, traditional crafts, and historical storytelling under the open sky.\n\nAttendees will be immersed in vibrant performances from various regions of the country, showcasing the colors and rhythms of indigenous and rural communities. From Baul singers and tabla ensembles to puppetry and theatrical reenactments, every act is a tribute to the nation’s deep-rooted heritage. The venue will also feature artisan booths, food stalls offering local delicacies, and cultural exhibitions that highlight centuries of craftsmanship and oral traditions.\n\nOpen to families, students, tourists, and culture lovers alike, Cultural Heritage Night is designed to educate, inspire, and unite. It’s not just an event—it’s a journey through time that honors the soul of Bangladesh and its enduring legacy of art, identity, and storytelling."
     }
   ]
   
