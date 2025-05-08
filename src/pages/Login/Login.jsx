@@ -38,7 +38,7 @@ handleLogin(email,password)
     const handleGoogleLogIn =  () =>{
         googleSignIn()
         .then(result => {
-            // console.log(result.user)
+            
             navigate(from ? from :"/")
             toast.success("Your Google Logged In Successful1")
         })
