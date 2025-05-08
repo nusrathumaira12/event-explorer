@@ -12,6 +12,8 @@ import ReservedSeats from "../pages/ReservedSeats/ReservedSeats";
 import PrivateRoute from "../component/PrivateRoute/PrivateRoute";
 import Reviews from "../pages/Reviews/Reviews";
 import TechEvents from "../pages/TechEvents/TechEvents";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import ForgetPassword from "../pages/ForgetPassword/ForgetPassword";
 
 
 
@@ -21,11 +23,13 @@ export const router = createBrowserRouter([
     {
         path: "/",
         Component: RootLayout,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
                 Component: Home,
-                loader: ()=>fetch("/data.json")
+                loader: ()=>fetch("/data.json"),
+                hydrateFallbackElement: <div className="text-xl font-bold mx-auto justify-center">Loading.......</div>
             },
             {
                 path: "/about",
@@ -51,6 +55,11 @@ export const router = createBrowserRouter([
                 Component: Login
             },
             {
+                path: "/forget-password",
+                Component: ForgetPassword
+            },
+
+            {
                 path: "/register",
                 Component: Register
             },
@@ -60,6 +69,7 @@ export const router = createBrowserRouter([
                 <EventDetails></EventDetails>
                </PrivateRoute>,
                 loader: ()=>fetch("/data.json"),
+                hydrateFallbackElement: <div className="text-xl font-bold mx-auto justify-center">Loading.......</div>
 
             },
             {

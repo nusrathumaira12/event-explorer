@@ -6,7 +6,7 @@ import { ValueContext} from '../../RootLayout/RootLayout';
 import { toast } from 'react-toastify';
 
 const Login = () => {
-    const {handleLogin,handleForgetPassword ,googleSignIn} = useContext(ValueContext)
+    const {handleLogin ,googleSignIn} = useContext(ValueContext)
     const [userEmail, setUserEmail] = useState("")
     const [error,setError] = useState('')
     const location = useLocation()
@@ -82,12 +82,15 @@ handleLogin(email,password)
                 <div className="space-y-2">
                     <div className="flex justify-between">
                         <label htmlFor="password" className="text-sm">Password</label>
-                        <button onClick={()=>handleForgetPassword(userEmail)} className="text-xs hover:underline text-gray-600">Forgot password?</button>
+                        <button 
+                        type='button'
+                        onClick={()=>navigate('/forget-password',{ state: { email: userEmail } })}
+                        className="text-xs hover:underline text-gray-600">Forgot password?</button>
                     </div>
                     <input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" />
                 </div>
             </div>
-            <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">Sign in</button>
+            <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-violet-600 text-gray-50">Log In</button>
            
         </form>
        

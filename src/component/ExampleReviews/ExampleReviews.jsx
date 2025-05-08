@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
+import { ValueContext } from '../../RootLayout/RootLayout';
 
 const ExampleReviews = () => {
+	const { user } = useContext(ValueContext); 
     return (
         <div>
             <section className="p-6">
 			{/* <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-10 mx-auto text-center ">Visitor's Review</h2> */}
 			<li className="flex">
                         <NavLink className="flex items-center bg-amber-200 text-3xl sm:text-4xl font-bold px-20 mb-10 mx-auto rounded-xl py-2 text-center text-violet-800"
-                        to="/reviews"
+                        to={user ? "/reviews" : "/login"}
                         >Visitor's Review 
 						
 						</NavLink>
@@ -33,7 +35,7 @@ const ExampleReviews = () => {
 		</div>
 		<li className="flex">
                         <NavLink className="flex items-center bg-gray-50 text-lg font-semibold px-10 my-10 mx-auto rounded-xl py-2 text-center border-gray-300 border text-gray-700 hover:bg-violet-800 hover:text-white"
-                        to="/reviews"
+                        to={user ? "/reviews" : "/login"}
                         >See More Reviews
 						
 						</NavLink>

@@ -8,7 +8,6 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const googleProvider = new GoogleAuthProvider();
-
 export  const  ValueContext =createContext()
 
 const RootLayout = () => {
@@ -39,18 +38,18 @@ return updateProfile(auth.currentUser ,updatedData )
     .then(() => {
       toast.success(" Logged Out Successfully")
       }).catch((error) => {
+        console.log("Error", error); 
         toast.error(error.message)
      
       });
+    }
 
-
-  }
   const  handleForgetPassword = (email) => {
    
-    sendPasswordResetEmail(auth, email)
+  return  sendPasswordResetEmail(auth, email)
     .then(() => {
       toast.success("password reset email sent.Check your inbox.")
-     
+      window.location.href = "https://mail.google.com";
     })
     .catch((error) => {
       toast.error(error.message)
@@ -86,18 +85,19 @@ return updateProfile(auth.currentUser ,updatedData )
     handleForgetPassword,
     updateUser ,
   }
-  if (loading) {
-    return <div>Loading...</div>; 
-  }
+  
     return (
-        <div>
+        <div  className='min-h-screen flex flex-col'>
            
             <ValueContext.Provider value={contextValues}>
             <Navbar></Navbar>
+            <main className="flex-grow">
             <Outlet></Outlet>
+            </main>
             <Footer></Footer>
             <ToastContainer></ToastContainer>
            </ValueContext.Provider>
+           
         </div>
     );
 };

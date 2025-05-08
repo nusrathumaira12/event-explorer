@@ -9,10 +9,7 @@ const EventDetails = () => {
  const singleData = data.find(event => event.id == id)
  
  const {date,location,name,entry_fee,thumbnail,description } = singleData;
-//  const {user} = useContext(valueContext)
-//  if(!user || !user?.email){
-//    return <Navigate to="/login"></Navigate>
-//  }
+
 
 const [formData, setFormData] = useState({ name: '', email: '' })
 const [submitted, setSubmitted]= useState(false)

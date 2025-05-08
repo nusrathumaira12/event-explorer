@@ -3,10 +3,14 @@ import { ValueContext } from '../../RootLayout/RootLayout';
 import { updateProfile } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import { auth } from '../../firebase/firebase.config';
+import userIcon from "../../assets/user.png"
 
 const MyProfile = () => {
     const {user} =useContext(ValueContext)
     const [name, setName] = useState(user ?. displayName || '');
+  
+    const email = user.email
+
     const [photoURL, setPhotoURL] = useState(user ?.photoURL || '');
     const [isUpdating, setIsUpdating] = useState(false);
    const handleProfileUpdate = async (e)=> {
@@ -27,17 +31,23 @@ const MyProfile = () => {
     setIsUpdating(false)
    }
     return (
-        <div className="container p-6 mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-4">My Profile</h1>
-        <h2 className='text-2xl font-bold text-violet-500  text-center mb-2'>{name}</h2>
+        <div className="container p-6   bg-white mx-auto ">
+       <div className='py-20 mx-auto justify-center w-6/10 rounded-4xl bg-violet-100' >
+       <h1 className="text-3xl font-bold text-center mb-4 ">My Profile</h1>
+        <h2 className='text-2xl font-bold text-violet-500 text-center mb-2'>{name}</h2>
+        <h2 className='text-lg  text-violet-500  text-center mb-10'>{email}</h2>
         
         <div className="flex justify-center mb-4">
           <img
-            src={photoURL || 'https://via.placeholder.com/150'}
+            src={`${photoURL || userIcon}`}
+            // {photoURL || 'userIcon'}
             alt="Profile"
-            className="w-24 h-24 rounded-full object-cover"
+            className="w-44 h-44 rounded-full object-cover"
           />
         </div>
+
+       </div>
+        
         <form onSubmit={handleProfileUpdate} className="space-y-4">
           <div>
             <label className="block text-sm font-medium">Name</label>

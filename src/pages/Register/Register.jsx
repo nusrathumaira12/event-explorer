@@ -3,12 +3,14 @@ import { NavLink, useNavigate } from 'react-router';
 
 import { ValueContext } from '../../RootLayout/RootLayout';
 import { toast } from 'react-toastify';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
     const { handleRegister, updateUser, googleSignIn } = useContext(ValueContext)
 
     const navigate = useNavigate()
     const [error, setError] = useState('')
+    const [showPassword, setShowPassword] = useState(false)
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -89,11 +91,24 @@ const Register = () => {
                         <input type="text" name="photo" id="photoURL" placeholder="photo URL" className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 dark:text-gray-800" />
                     </div>
                     <div>
-                        <div className="flex justify-between mb-2">
-                            <label htmlFor="password" className="text-sm">Password</label>
-
+                        <div >
+                          
+                           <label htmlFor="password" className="text-sm mb-2">Password</label>
+                           <div className="relative ">
+                            <input type={showPassword ? 'text' : 'password'}
+ name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800" />
+                                
+                            <button type='button'
+                                onClick={()=>{ setShowPassword(!showPassword) }}
+                                className='btn btn-xs absolute top-3 right-6'>
+                                {
+                                    showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                }
+                            </button>
+                           </div>
                         </div>
-                        <input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800" />
+
+
                     </div>
 
                 </div>
