@@ -3,6 +3,7 @@ import { useLocation } from 'react-router';
 import { useContext } from 'react';
 import { ValueContext } from '../../RootLayout/RootLayout';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet-async';
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState('');
@@ -32,6 +33,9 @@ const ForgetPassword = () => {
 
   return (
     <div className="w-full max-w-md p-4 mx-auto mt-[80px] bg-gray-100 rounded-md">
+      <Helmet>
+                  <title>Forget Password</title>
+                </Helmet>
       <h2 className="mb-4 text-2xl font-bold text-center">Reset Your Password</h2>
       <div className="space-y-4">
         <label className="block text-sm">Email</label>

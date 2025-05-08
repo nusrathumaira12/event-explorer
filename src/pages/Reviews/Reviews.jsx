@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
 // import { valueContext } from '../../RootLayout/RootLayout';
 // import { Navigate } from 'react-router';
 
@@ -35,6 +36,9 @@ const reviews = [
 
   return (
     <section className=" py-12 px-4 sm:px-6 lg:px-16 bg-gray-100">
+      <Helmet>
+                  <title>Reviews</title>
+                </Helmet>
       <div className="max-w-6xl mx-auto text-center ">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">What People Are Saying</h2>
         <p className="text-gray-600 mb-10">Real reviews from our community</p>

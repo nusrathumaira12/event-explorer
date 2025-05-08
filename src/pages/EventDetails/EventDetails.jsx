@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import {  useLoaderData,  useParams } from 'react-router';
 import { toast } from 'react-toastify';
 
@@ -31,7 +32,10 @@ const handleSubmit = (e) => {
 
     return (
         <div className="py-6 bg-white">
-         <h2 class="text-5xl font-semibold text-violet-600 my-20  mx-auto text-center">Event Spotlight</h2>
+          <Helmet>
+            <title>Event Detail | {id}</title>
+          </Helmet>
+         <h2 className="text-5xl font-semibold text-violet-600 my-20  mx-auto text-center">Event Spotlight</h2>
 <div className='md:flex mx-auto w-[90%]  justify-center gap-2'>
 <div className='w-[60%] h-[600x] '>
     <img src={thumbnail} alt="" />

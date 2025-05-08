@@ -91,6 +91,7 @@ return updateProfile(auth.currentUser ,updatedData )
            
             <ValueContext.Provider value={contextValues}>
             <Navbar></Navbar>
+            {import.meta.env.VITE_name}
             <main className="flex-grow">
             <Outlet></Outlet>
             </main>

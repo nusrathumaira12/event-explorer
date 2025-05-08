@@ -1,9 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const TechEvents = () => {
     return (
         <div className='w-11/12  mx-auto my-30 justify-center '>
-            
+            <Helmet>
+						<title>Tech Events</title>
+					  </Helmet>
             <h2 className='text-4xl text-gray-800 font-bold mb-10 pl-10 justify-center w-2/6 mx-auto items-center '>Tech Events In Dhaka</h2>
             
                     <div className='flex flex-cols-2 md:flex-cols-3   gap-6 justify-center  mx-10 '>

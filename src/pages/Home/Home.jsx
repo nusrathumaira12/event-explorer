@@ -5,12 +5,16 @@ import { useLoaderData } from 'react-router';
 import Reviews from '../Reviews/Reviews';
 import TechEvents from '../TechEvents/TechEvents';
 import ExampleReviews from '../../component/ExampleReviews/ExampleReviews';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     const data = useLoaderData()
     
     return (
         <>
+        <Helmet>
+            <title>Fusion Sphere | Home</title>
+        </Helmet>
            <Banner></Banner>
            <div>
            <h2 className='text-violet-500 text-6xl text-center mx-auto font-bold my-20'>Upcoming Events</h2>

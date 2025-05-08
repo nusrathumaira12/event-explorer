@@ -4,6 +4,7 @@ import { NavLink, useNavigate } from 'react-router';
 import { ValueContext } from '../../RootLayout/RootLayout';
 import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     const { handleRegister, updateUser, googleSignIn } = useContext(ValueContext)
@@ -72,6 +73,9 @@ const Register = () => {
 
     return (
         <div className="flex flex-col max-w-md p-6 rounded-md mx-auto mt-[80px] sm:p-10 bg-gray-100  ">
+            <Helmet>
+                        <title>Register</title>
+                      </Helmet>
             <div className="mb-8 text-center">
                 <h1 className="my-3 text-4xl font-bold">Register</h1>
                 <p className="text-sm text-gray-600">Create your new account</p>

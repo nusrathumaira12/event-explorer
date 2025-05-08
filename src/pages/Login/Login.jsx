@@ -4,6 +4,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router';
 
 import { ValueContext} from '../../RootLayout/RootLayout';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
     const {handleLogin ,googleSignIn} = useContext(ValueContext)
@@ -37,7 +38,7 @@ handleLogin(email,password)
     const handleGoogleLogIn =  () =>{
         googleSignIn()
         .then(result => {
-            console.log(result.user)
+            // console.log(result.user)
             navigate(from ? from :"/")
             toast.success("Your Google Logged In Successful1")
         })
@@ -49,6 +50,9 @@ handleLogin(email,password)
 
     return (
         <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gray-100  mx-auto mt-[80px]">
+            <Helmet>
+                        <title>Login Page</title>
+                      </Helmet>
         <h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
         <p className="text-sm text-center dark:text-gray-600">Don't have account?{' '}
             <NavLink to="/register" className="text-blue-600 focus:underline   hover:underline">Register here</NavLink>
