@@ -48,7 +48,7 @@ const Banner = () => {
                     <span className="text-violet-600">{slide.title.split(' ').slice(-1)}
                         {/* Business */}
                         </span>
-                        {/* <span className='text-amber-500  text-6xl'>C</span>onference 2025 */}
+                      
                 </h1>
                 <p className="mt-6 mb-8 text-lg sm:mb-12"> {slide.description}
                     {/* <br  className="hidden md:inline lg:hidden" />Explore, connect, and create—FusionSphere is where the future of creative events begins. */}
