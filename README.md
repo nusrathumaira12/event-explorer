@@ -1,55 +1,57 @@
-# 🏃‍♂️ Athletic Event - Sports Event Booking Platform
+# 🎉 Event Explorer
 
-**Athletic Event** is a modern web application that allows users to discover, explore, and book local athletic events. With a secure authentication system, dynamic event details, and responsive UI, it’s designed for sports lovers to stay engaged and organized.
+A local event discovery platform where users can explore upcoming events, view details, and make bookings. With authentication and secure booking system, Event Explorer makes finding and attending events easy and seamless.
 
-🔗 **Live Site:**  
-https://athletic-event.web.app/
-
----
-
-## 📸 Screenshot
-
-![Athletic Event Screenshot](https://user-images.githubusercontent.com/yourusername/your-screenshot-link.png)
-<!-- Replace with actual uploaded screenshot URL -->
+![Event Explorer Screenshot](./screenshot.png) <!-- তোমার স্ক্রিনশটের রিলেটিভ পাথ/লিংক দাও এখানে -->
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technologies Used
 
-- React.js & React Router  
-- Firebase Authentication  
-- Node.js & Express.js (Backend)  
-- MongoDB (Database)  
-- Tailwind CSS  
-- SweetAlert2  
-- JWT (Authentication Token)  
+- **Frontend**: React.js, Tailwind CSS, React Router DOM, Framer Motion  
+- **Authentication**: Firebase Auth (Email/Password + Google Sign-In)  
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB  
+- **Token Management**: JSON Web Token (JWT)
 
 ---
 
 ## 🚀 Main Features
 
-- 🔐 Secure Authentication (Email/Password & Google Login)  
-- 📋 Browse upcoming athletic events  
-- ✅ Book an event with restriction to prevent duplicate bookings  
-- ❤️ Like functionality with trending tips section  
-- 🧾 My Bookings page with Card/Table toggle view  
-- 🔍 Search events by name or location  
-- 🔒 Protected Routes using JWT and Firebase  
-- 🎨 Responsive UI with animations using Framer Motion  
+- 🔐 User Authentication (Email/Password and Google)
+- 📅 Browse and Book Local Events
+- ✅ Prevent Duplicate Bookings
+- 🔍 Search Events by Name or Location
+- 🔒 JWT-Protected Private Routes
+- 🎛️ Toggle Between Card and Table View in Bookings
+- ❤️ Like System for Trending Events
+- 🌐 Fully Responsive UI with Smooth Animations
 
 ---
 
 ## 📦 Key Dependencies
 
-- `react`  
 - `firebase`  
 - `axios`  
 - `react-router-dom`  
 - `sweetalert2`  
+- `jsonwebtoken`  
 - `jwt-decode`  
 - `framer-motion`  
 - `classnames`  
-- Backend: `express`, `cors`, `dotenv`, `mongodb`, `jsonwebtoken`
+- `mongoose`  
+- `cors`  
+- `dotenv`
+
+---
+
+## 🧪 How to Run on Local Machine
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/event-explorer.git
+cd event-explorer
 
 ---
 
