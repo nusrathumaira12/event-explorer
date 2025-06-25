@@ -91,7 +91,7 @@ VITE_FIREBASE_APP_ID=your_app_id
 
 ## 🔗 Relevant Links
 
-- GitHub Repo: https://quiet-kataifi-5abe2a.netlify.app/
+- GitHub Repo: https://github.com/nusrathumaira12/event-explorer
 - Live Site: https://quiet-kataifi-5abe2a.netlify.app/  
 - Firebase Console: [https://console.firebase.google.com](https://console.firebase.google.com)  
 
