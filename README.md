@@ -45,15 +45,7 @@ A local event discovery platform where users can explore upcoming events, view d
 
 ---
 
-## 🧪 How to Run on Local Machine
 
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/your-username/event-explorer.git
-cd event-explorer
-
----
 
 ## 💻 Getting Started (Run Locally)
 
