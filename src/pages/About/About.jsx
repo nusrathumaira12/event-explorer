@@ -25,7 +25,7 @@ const About = () => {
           <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold text-gray-900">Personalized Event Discovery</h3>
             <p className="mt-2 text-gray-600">
-              Based on your location and interests, we'll recommend events tailored just for you.
+              Based on your location and interests, we'll recommend events tailored  for you.
             </p>
           </div>
 
