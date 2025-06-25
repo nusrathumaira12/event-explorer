@@ -2,7 +2,7 @@
 
 A local event discovery platform where users can explore upcoming events, view details, and make bookings. With authentication and secure booking system, Event Explorer makes finding and attending events easy and seamless.
 
-![Event Explorer Screenshot](./screenshot.png) <!-- তোমার স্ক্রিনশটের রিলেটিভ পাথ/লিংক দাও এখানে -->
+![Event Explorer Screenshot](./screenshot.png) 
 
 ---
 
