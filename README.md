@@ -91,8 +91,8 @@ VITE_FIREBASE_APP_ID=your_app_id
 
 ## 🔗 Relevant Links
 
-- GitHub Repo: [https://github.com/nusrathumaira12/gardening-hub-auth](https://github.com/nusrathumaira12/gardening-hub-auth)  
-- Live Site: [https://gardening-auth-project.web.app/](https://gardening-auth-project.web.app/)  
+- GitHub Repo: https://quiet-kataifi-5abe2a.netlify.app/
+- Live Site: https://quiet-kataifi-5abe2a.netlify.app/  
 - Firebase Console: [https://console.firebase.google.com](https://console.firebase.google.com)  
 
 ---
