@@ -33,7 +33,7 @@ A local event discovery platform where users can explore upcoming events, view d
 
 - `firebase`  
 - `axios`  
-- `react-router-dom`  
+- `react-router`  
 - `sweetalert2`  
 - `jsonwebtoken`  
 - `jwt-decode`  
